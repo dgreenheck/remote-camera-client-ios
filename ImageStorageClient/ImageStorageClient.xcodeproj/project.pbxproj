@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D60F98323BF273E0004D362 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60F98223BF273E0004D362 /* ImageCollectionViewController.swift */; };
+		7D60F98823BF29060004D362 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60F98723BF29060004D362 /* ImageCollectionViewCell.swift */; };
+		7D60F98A23BF2C360004D362 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60F98923BF2C360004D362 /* CameraViewController.swift */; };
+		7D60F98C23BF2C5C0004D362 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60F98B23BF2C5C0004D362 /* ImageDetailsViewController.swift */; };
 		7D7A8B1C23BF23C200A7EA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7A8B1B23BF23C200A7EA92 /* AppDelegate.swift */; };
 		7D7A8B1E23BF23C200A7EA92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7A8B1D23BF23C200A7EA92 /* SceneDelegate.swift */; };
 		7D7A8B2023BF23C200A7EA92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7A8B1F23BF23C200A7EA92 /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D60F98223BF273E0004D362 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		7D60F98723BF29060004D362 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7D60F98923BF2C360004D362 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "ImageStorageClient/View Controllers/CameraViewController.swift"; sourceTree = SOURCE_ROOT; };
+		7D60F98B23BF2C5C0004D362 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
 		7D7A8B1823BF23C200A7EA92 /* ImageStorageClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageStorageClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7A8B1B23BF23C200A7EA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7A8B1D23BF23C200A7EA92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D60F98123BF27230004D362 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D60F98923BF2C360004D362 /* CameraViewController.swift */,
+				7D60F98223BF273E0004D362 /* ImageCollectionViewController.swift */,
+				7D60F98B23BF2C5C0004D362 /* ImageDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7D60F98423BF289E0004D362 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D60F98723BF29060004D362 /* ImageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7D7A8B0F23BF23C200A7EA92 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +125,8 @@
 		7D7A8B1A23BF23C200A7EA92 /* ImageStorageClient */ = {
 			isa = PBXGroup;
 			children = (
+				7D60F98423BF289E0004D362 /* Views */,
+				7D60F98123BF27230004D362 /* View Controllers */,
 				7D7A8B1B23BF23C200A7EA92 /* AppDelegate.swift */,
 				7D7A8B1D23BF23C200A7EA92 /* SceneDelegate.swift */,
 				7D7A8B1F23BF23C200A7EA92 /* ViewController.swift */,
@@ -260,8 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7A8B2023BF23C200A7EA92 /* ViewController.swift in Sources */,
+				7D60F98823BF29060004D362 /* ImageCollectionViewCell.swift in Sources */,
+				7D60F98C23BF2C5C0004D362 /* ImageDetailsViewController.swift in Sources */,
+				7D60F98323BF273E0004D362 /* ImageCollectionViewController.swift in Sources */,
 				7D7A8B1C23BF23C200A7EA92 /* AppDelegate.swift in Sources */,
 				7D7A8B1E23BF23C200A7EA92 /* SceneDelegate.swift in Sources */,
+				7D60F98A23BF2C360004D362 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
