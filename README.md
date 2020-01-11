@@ -55,8 +55,9 @@ mongodo --version
 ```
 The MongoDB module also has to be installed for Node.js
 ```
-sudo npm install mongodb
+sudo npm install mongodb@2.2.35
 ```
+Since my Raspberry Pi is ancient, I needed to use an older version of the Node.js MongoDB driver since it wasn't liking the fact I had MongoDB v2.4. I believe the primary issue is that MongoDB doesn't support x86 anymore. Using SQLite is probably a better option if you're using a Raspberry Pi. I'm only using Mongo since I can slap together a solution quickly.
 
 ### 7. (Optional) Setup Port Forwarding
 If you want to access your web server outside of your private network, you will need to setup port forwarding on your router. If you only want to use the application on your private network, this step is not necessary.
