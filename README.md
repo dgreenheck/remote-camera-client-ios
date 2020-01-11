@@ -53,3 +53,10 @@ Once again you can verify the installation by checking the version number
 ```
 mongodo --version
 ```
+The MongoDB module also has to be installed for Node.js
+```
+sudo npm install mongodb
+```
+
+### 7. (Optional) Setup Port Forwarding
+If you want to access your web server outside of your private network, you will need to setup port forwarding on your router. If you only want to use the application on your private network, this step is not necessary.
