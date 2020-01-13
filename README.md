@@ -1,10 +1,16 @@
-# image-server-ios
+# security-camera-ios
 
-iOS app for capturing and storing images on a local web server.
+## WARNING
+**NOTE: Please use this software at your own risk. This project is designed to be an example of a home security system and does not have the appropriate security protocols in place. By opening your web server up to the public, you are putting yourself at risk for a hacker to access videos of your home.**
+
+## Introduction
+This repository contains code to setup a Raspberry Pi as a home security camera. I've also provided code for an iOS app which connects to a Node.js server setup on the Raspberry Pi to a) stream real-time video from security camera and b) view old recordings.
 
 ## Raspberry Pi Setup
-
-I'm using a Raspberry Pi as the web server, but you can use any other machine you have available.
+The Raspberry Pi serves several functions
+1. Record video from the camera to disk
+2. Stream real-time video from the camera to a client
+3. Act as a web server to allow old videos to be retrieved and viewed
 
 ### 1. Install Raspbian
 https://www.raspberrypi.org/documentation/raspbian/
@@ -44,20 +50,14 @@ node -v
 npm -v
 ```
 
-### 6. Install MongoDB
-MongoDB is a document based database which is used to store the image data captured from the phone. The JavaScript code will interface with the database, querying and modifying data per the client requests.
-```
-sudo apt-get install mongodb-server
-```
-Once again you can verify the installation by checking the version number
-```
-mongodo --version
-```
-The MongoDB module also has to be installed for Node.js
-```
-sudo npm install mongodb@2.2.35
-```
-Since my Raspberry Pi is ancient, I needed to use an older version of the Node.js MongoDB driver since it wasn't liking the fact I had MongoDB v2.4. I believe the primary issue is that MongoDB doesn't support x86 anymore. Using SQLite is probably a better option if you're using a Raspberry Pi. I'm only using Mongo since I can slap together a solution quickly.
+### 6. Setup Python3
+The security camera scripting is performed using Python. While Raspbian should come with Python3, you can double check by entering `python3` in the console.
 
-### 7. (Optional) Setup Port Forwarding
+You'll need to install a few packages to capture video from the Raspberry Pi camera. The first is `PiCamera`, which is a Python library for communicating with the camera.
+```
+sudo apt-get update
+sudo apt-get install python3-camera
+```
+
+### 6. (Optional) Setup Port Forwarding
 If you want to access your web server outside of your private network, you will need to setup port forwarding on your router. If you only want to use the application on your private network, this step is not necessary.
