@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoCollectionViewCell" customModule="RemoteCameraClient" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoCollectionViewCell" customModule="RemoteCameraClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3QE-do-tMK">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-nO-9Vx">
+                        <rect key="frame" x="61.5" y="61.5" width="37" height="37"/>
+                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="q8U-nO-9Vx" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="3uw-ve-PMN"/>
+                <constraint firstItem="3QE-do-tMK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EsT-Qn-1xM"/>
+                <constraint firstAttribute="bottom" secondItem="3QE-do-tMK" secondAttribute="bottom" id="UA7-Vu-Wcf"/>
+                <constraint firstAttribute="trailing" secondItem="3QE-do-tMK" secondAttribute="trailing" id="c9h-az-CdO"/>
+                <constraint firstItem="q8U-nO-9Vx" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="cc7-8K-okc"/>
+                <constraint firstItem="3QE-do-tMK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z43-1W-y1d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="97" height="84"/>
+            <connections>
+                <outlet property="imageView" destination="3QE-do-tMK" id="hqH-Yq-zDE"/>
+                <outlet property="progressWheel" destination="q8U-nO-9Vx" id="wzU-Kc-GgX"/>
+            </connections>
+            <point key="canvasLocation" x="139.85507246376812" y="76.339285714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>
